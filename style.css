@@ -1,56 +1,131 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    margin: 0;
-    padding: 40px;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-form {
-    max-width: 500px;
-    margin: auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+* {
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7ff, #eef8ff);
+    color: #27324a;
+    margin: 0;
+    padding: 50px 20px;
+    min-height: 100vh;
+}
+
+/* Main heading */
+h1 {
+    text-align: center;
+    color: #354a72;
+    margin-bottom: 35px;
+    font-size: 34px;
+    letter-spacing: 0.5px;
+}
+
+/* Task form card */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #e3e8f5;
+    box-shadow: 0 10px 30px rgba(91, 108, 145, 0.15);
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #40516f;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* Text fields */
+input,
 textarea {
-    height: 120px;
+    width: 100%;
+    padding: 13px 14px;
+    margin-bottom: 22px;
+    border: 1px solid #d6ddef;
+    border-radius: 10px;
+    background-color: #fafbff;
+    color: #27324a;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    transition: 0.2s ease;
+}
+
+/* Input focus effect */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #7c83fd;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(124, 131, 253, 0.12);
+}
+
+/* Placeholder text */
+input::placeholder,
+textarea::placeholder {
+    color: #9aa5ba;
+}
+
+/* Description box */
+textarea {
+    min-height: 130px;
     resize: vertical;
 }
 
+/* Add Task button */
 button {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     border: none;
-    border-radius: 6px;
-    background-color: #333;
-    color: white;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #7c83fd, #6c63ff);
+    color: #ffffff;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    box-shadow: 0 6px 15px rgba(108, 99, 255, 0.25);
+    transition: 0.2s ease;
 }
 
+/* Button hover */
 button:hover {
-    background-color: #555;
+    background: linear-gradient(135deg, #6c63ff, #5b54e8);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(108, 99, 255, 0.30);
+}
+
+/* Button click */
+button:active {
+    transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+
+    body {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 27px;
+        margin-bottom: 25px;
+    }
+
+    form {
+        padding: 25px 20px;
+        border-radius: 14px;
+    }
+
+    input,
+    textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 15px;
+    }
 }
