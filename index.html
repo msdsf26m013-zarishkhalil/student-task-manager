@@ -11,7 +11,7 @@
 
     <h1>Student Task Manager</h1>
 
-    <form>
+    <form id="taskForm">
         <label for="task-title">Task Title</label>
         <input
             type="text"
@@ -27,6 +27,23 @@
 
         <button type="submit">Add Task</button>
     </form>
+
+    <h2>Search Tasks</h2>
+
+    <input
+        type="text"
+        id="taskSearch"
+        placeholder="Search tasks..."
+        onkeyup="searchTasks()"
+    >
+
+    <ul id="taskList">
+        <li>Complete Machine Learning Assignment</li>
+        <li>Study AWS</li>
+        <li>Practice Git and GitHub</li>
+    </ul>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
