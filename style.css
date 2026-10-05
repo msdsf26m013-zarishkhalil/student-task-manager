@@ -1,131 +1,180 @@
 * {
-    box-sizing: border-box;
-}
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f5f7ff, #eef8ff);
-    color: #27324a;
-    margin: 0;
-    padding: 50px 20px;
-    min-height: 100vh;
+font-family: Arial, sans-serif;
+background: #f4f6f8;
+min-height: 100vh;
+padding: 30px 15px;
 }
 
-/* Main heading */
-h1 {
-    text-align: center;
-    color: #354a72;
-    margin-bottom: 35px;
-    font-size: 34px;
-    letter-spacing: 0.5px;
+.container {
+max-width: 800px;
+margin: auto;
 }
 
-/* Task form card */
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 35px;
-    border-radius: 18px;
-    border: 1px solid #e3e8f5;
-    box-shadow: 0 10px 30px rgba(91, 108, 145, 0.15);
+/* Header */
+
+header {
+text-align: center;
+margin-bottom: 30px;
 }
 
-/* Labels */
+header h1 {
+font-size: 36px;
+margin-bottom: 8px;
+}
+
+header p {
+color: #666;
+font-size: 16px;
+}
+
+/* Sections */
+
+.task-form-section,
+.search-section {
+background: white;
+padding: 25px;
+margin-bottom: 20px;
+border-radius: 10px;
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+margin-bottom: 20px;
+}
+
+/* Form */
+
+.form-group {
+margin-bottom: 15px;
+}
+
 label {
-    display: block;
-    margin-bottom: 8px;
-    color: #40516f;
-    font-weight: bold;
-    font-size: 15px;
+display: block;
+margin-bottom: 7px;
+font-weight: bold;
 }
 
-/* Text fields */
 input,
 textarea {
-    width: 100%;
-    padding: 13px 14px;
-    margin-bottom: 22px;
-    border: 1px solid #d6ddef;
-    border-radius: 10px;
-    background-color: #fafbff;
-    color: #27324a;
-    font-size: 15px;
-    font-family: Arial, sans-serif;
-    transition: 0.2s ease;
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 6px;
+font-size: 15px;
 }
 
-/* Input focus effect */
+textarea {
+min-height: 100px;
+resize: vertical;
+}
+
 input:focus,
 textarea:focus {
-    outline: none;
-    border-color: #7c83fd;
-    background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(124, 131, 253, 0.12);
+outline: none;
+border-color: #333;
 }
 
-/* Placeholder text */
-input::placeholder,
-textarea::placeholder {
-    color: #9aa5ba;
-}
+/* Buttons */
 
-/* Description box */
-textarea {
-    min-height: 130px;
-    resize: vertical;
-}
-
-/* Add Task button */
 button {
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #7c83fd, #6c63ff);
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 6px 15px rgba(108, 99, 255, 0.25);
-    transition: 0.2s ease;
+border: none;
+border-radius: 6px;
+padding: 10px 16px;
+cursor: pointer;
+font-size: 14px;
 }
 
-/* Button hover */
-button:hover {
-    background: linear-gradient(135deg, #6c63ff, #5b54e8);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(108, 99, 255, 0.30);
+.add-btn {
+width: 100%;
+padding: 12px;
+font-weight: bold;
 }
 
-/* Button click */
-button:active {
-    transform: translateY(0);
+/* Search */
+
+#searchInput {
+margin-top: 5px;
 }
 
-/* Responsive design */
+/* Task list */
+
+#taskList {
+list-style: none;
+}
+
+.task {
+background: white;
+padding: 20px;
+margin-bottom: 15px;
+border-radius: 10px;
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.task.completed {
+opacity: 0.65;
+}
+
+.task.completed .task-title {
+text-decoration: line-through;
+}
+
+.task-title {
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 8px;
+}
+
+.task-description {
+color: #666;
+margin-bottom: 15px;
+line-height: 1.5;
+}
+
+.task-actions {
+display: flex;
+gap: 10px;
+}
+
+.complete-btn {
+background: #ddd;
+}
+
+.delete-btn {
+background: #ddd;
+}
+
+.empty-message {
+text-align: center;
+color: #777;
+padding: 30px;
+}
+
+/* Mobile */
+
 @media (max-width: 600px) {
 
-    body {
-        padding: 30px 15px;
-    }
+```
+body {
+    padding: 20px 10px;
+}
 
-    h1 {
-        font-size: 27px;
-        margin-bottom: 25px;
-    }
+header h1 {
+    font-size: 28px;
+}
 
-    form {
-        padding: 25px 20px;
-        border-radius: 14px;
-    }
+.task-actions {
+    flex-direction: column;
+}
 
-    input,
-    textarea {
-        font-size: 14px;
-    }
+.task-actions button {
+    width: 100%;
+}
+```
 
-    button {
-        font-size: 15px;
-    }
 }
